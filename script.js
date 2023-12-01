@@ -3,7 +3,7 @@ function submitRequest() {
     const artist = document.getElementById('artist').value;
     const comment = document.getElementById('comment').value;
 
-    fetch('http://localhost:3000/submit-request', {
+    fetch('https://discootjeaanvragen.netlify.app/submit-request', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -25,7 +25,7 @@ function submitRequest() {
 }
 
 function getRequests() {
-    fetch('http://localhost:3000/get-requests') // Replace with your server endpoint for retrieving requests
+    fetch('https://discootjeaanvragen.netlify.app/get-requests') // Replace with your server endpoint for retrieving requests
         .then(response => response.json())
         .then(data => {
             const requestsList = document.getElementById('requestsList');
