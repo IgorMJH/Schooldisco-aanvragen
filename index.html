@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liedverzoeken School Disco</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container disco-theme">
+        <h1>Liedverzoeken School Disco</h1>
+        <form id="songRequestForm">
+            <label for="songName">Naam van het lied:</label>
+            <input type="text" id="songName" name="songName" required>
+            <label for="artist">Artiest:</label>
+            <input type="text" id="artist" name="artist" required>
+            <label for="comment">Extra commentaar:</label>
+            <textarea id="comment" name="comment" rows="4" placeholder="Optioneel"></textarea>
+            <button type="button" onclick="submitRequest()">Verzoek indienen</button>
+        </form>
+    </div>
+
+    <div class="requests-container">
+        <h2>Submitted Requests</h2>
+        <ul id="requestsList"></ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
