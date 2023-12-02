@@ -3,7 +3,7 @@ function submitRequest() {
     const artist = document.getElementById('artist').value;
     const comment = document.getElementById('comment').value;
 
-    fetch('https://discootjeaanvragen.netlify.app/submit-request', {
+    fetch('http://localhost:3000/submit-request', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -16,7 +16,7 @@ function submitRequest() {
             document.getElementById('songName').value = '';
             document.getElementById('artist').value = '';
             document.getElementById('comment').value = '';
-            getRequests(); // Call getRequests to update the displayed requests
+            getRequests(); // update de requests
         } else {
             console.error('Liedverzoek indienen mislukt.');
         }
@@ -25,7 +25,7 @@ function submitRequest() {
 }
 
 function getRequests() {
-    fetch('https://discootjeaanvragen.netlify.app/get-requests') // Replace with your server endpoint for retrieving requests
+    fetch('http://localhost:3000/get-requests') // endpoint, moet nog worden veranderd als we netlify willen gebruiken
         .then(response => response.json())
         .then(data => {
             const requestsList = document.getElementById('requestsList');
